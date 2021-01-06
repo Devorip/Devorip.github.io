@@ -1,0 +1,87 @@
+# General Jekyll Config
+title:                Devorip's blog
+subtitle:             Sharing anything I know and I think
+description:          >
+  My name is Thanh and I use devorip like sencond name.
+  born into a normal family and have a very normal life like many other children, until... 
+  My dad planted a lot of papaya in the back garden. 
+  That's when I suck a lot of papaya leaves, 
+  each such times I blogged again, writing down what I knew I thought.
+
+baseurl:              ""                                      # the subpath of your site, e.g. /blog
+url:                  "https://devorip.github.io"            # the base hostname & protocol for your site
+timezone:             Asia/Ho_Chi_Minh
+encoding:             utf-8
+locale:               vi_VN
+
+# Build settings
+permalink:            /:year-:month-:day/:title.html
+
+#paginate:             5
+#paginate_path:        "/page:num/"
+
+safe:                 false
+lsi:                  false
+source:               .
+destination:          _site
+layouts_dir:          _layouts
+data_dir:             _data
+include:              [.htaccess]
+exclude:
+  - LICENSE.md
+  - CNAME
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .git
+  - .gitignore
+
+keep_files:           []
+
+future:               true
+unpublished:          false
+markdown:             kramdown
+markdown_ext:         "md"
+excerpt_separator:    "<!--more-->"
+highlighter:          rouge
+
+kramdown:
+  input:              GFM
+  hard_wrap:          false
+  auto_ids:           true
+  footnote_nr:        1
+  entity_output:      as_char
+  toc_levels:         1..6
+  smart_quotes:       lsquo,rsquo,ldquo,rdquo
+  enable_coderay:     false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      css_class:      highlight
+      line_numbers:   true
+      start_line:     1
+      wrap:           true
+
+sass:
+  sass_dir:           _sass
+  style:              :compressed
+
+# Default vars
+defaults:
+  -
+    scope:
+      path:           ""
+      type:           posts
+    values:
+      layout:         post
+      author:         Devorip
+
+# Site customization
+google_analytics_key: UA-112254610-1            # Google Analytics key, leave blank to ignore
+disqus_shortname:     devorip                  # Disqus shortname for comments
+rss_feed:             /atom.xml                 # link to view rss feed (/atom.xml) in sidebar
+
+# Color for top bar, links, etc
+colors:
+  highlight:         '#DBECFF'
+theme: jekyll-theme-architect
