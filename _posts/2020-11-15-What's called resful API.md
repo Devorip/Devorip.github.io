@@ -48,10 +48,11 @@ vậy nó trả về gì? ý mình ở đây là status của các request.
 # III. Kinh nghiệm khi thiết kế Restful API 
 Đây là những kinh nghiệm mình đúc kết được khi làm về Restful 
 0. route
-route  | get | post | put | delete
--------- | ------------- | ------------- | ------------- | -------------
+
+route    | get                      | post     | put                | delete
+-------- | -------------            | -------- | -------------      | -------------
 /users   | return list users | create new user | update 1 list user | delete nhiều users
-/users/1 | return profile of 1 user | nothing | update 1 user | delete 1 user 
+/users/1 | return profile of 1 user | nothing  | update 1 user      | delete 1 user 
 
 1. không nên dùng các động từ mà dùng từ số nhiều
 ví dụ để lấy danh sách users chỉ cần users là đủ, k cần phải sử dụng getUsers, như vậy sẽ thừa và dài dòng cho về sau
@@ -207,7 +208,6 @@ posts/1/comment/create -> tạo comments
 ```
 
 bây giờ thì ta sẽ thấy nó khá ổn cho một vài lần update, đường dẫn k quá dài. các phần như update 1 user sẽ có nhiều hơn 1 club ta vẫn sẽ để như vậy và sửa đường dẫn nhưng k phải sửa quá nhiều. phần comment và posts thì k có nhiều update nên có thể để như vậy là duy trì được trong thời gian rất dài phải không? 
-
 
 bài viết của mình đến đây là kết thúc rồi. hi vọng các bạn sẽ thích nó. 
 
